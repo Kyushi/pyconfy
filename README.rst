@@ -3,12 +3,12 @@ YConPy - Yaml config to Python
 ==============================
 
 Requirements
-============
+------------
 
 Python 3.6
 
 About
-=====
+-----
 
 Pronunciation: *[why-con-pie]*
 
@@ -28,7 +28,7 @@ This reads all keys and values from the yaml file and writes a python file with 
 
 returns:
 
-.. code-block::
+.. code-block::python
     :linenos:
 
     class Data:
@@ -38,21 +38,20 @@ returns:
 
 so that you can use this as
 
-.. code-block::
-    :linenos:
+.. code-block:: python
 
-    Data.Files.filename
-
+    import myconfig
+    myconfig.Data.Files.filename
 
 in your code.
 
-The script does this by reading the yaml file using the standard yaml module, generating a string from it and writing that to a ```.py`` file.
+The script does this by reading the yaml file using the standard yaml module, generating a string from it and writing that to a ``.py`` file.
 
 Usage
-=====
+-----
 
 Download
---------
+~~~~~~~~
 
 .. code-block::
 
@@ -60,7 +59,7 @@ Download
 
 
 Install
--------
+~~~~~~~
 
 .. code-block::
 
@@ -68,7 +67,7 @@ Install
 
 
 Run
----
+~~~
 
 .. code-block::
 
