@@ -1,4 +1,4 @@
-# PyConfY - Python Config from Yaml
+# YConPy - Yaml config to Python 
 
 ## Requirements
 
@@ -6,8 +6,10 @@ Python 3.6
 
 ### About
 
-When working with a yaml config file, I was annoyed that I could not use auto completion in my favourite Pyton IDE for using, so I decided to read the config into a Python file with a class for each set of keys. Since having to add the keys in both the yaml file and in the python file, I came up with PyConfY. 
-This reads all keys and values from the yaml file and writes classes that reflect the yaml faithfully.
+Pronunciation: _[why-con-pie]_ 
+
+When working with a yaml config file, I was annoyed that I could not use auto completion in my favourite Pyton IDE, so I decided to read the config into a Python file with a class for each set of keys. Since having to add the keys in both the yaml file and in the python file is tiresome and error-prone, I came up with YConPy. 
+This reads all keys and values from the yaml file and writes a python file with classes that reflect the yaml faithfully.
 
 *Example:*
 ```
@@ -37,4 +39,11 @@ The script does this by reading the yaml file using the standard yaml module, ge
 
 ## Usage
 
-tba 
+The following command line arguments are required:
+
+ Arg | Help | Notes
+ --- | --- | ---
+ yaml | Path to yaml file | Planned feature: Yaml dir will be used as output file dir
+ root | Path to root directory of your project | -
+ out_file 
+
