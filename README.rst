@@ -17,6 +17,7 @@ This reads all keys and values from the yaml file and writes a python file with 
 
 *Example:*
 
+A file `myconfig.yaml`
 ::
 
     Data:
@@ -25,7 +26,7 @@ This reads all keys and values from the yaml file and writes a python file with 
       Files:
         filename: 'file.csv'
 
-returns:
+returns `myconfig.py`:
 
 .. code-block:: python
 
