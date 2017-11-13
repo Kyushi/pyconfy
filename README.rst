@@ -17,8 +17,7 @@ This reads all keys and values from the yaml file and writes a python file with 
 
 *Example:*
 
-.. code-block:: Yaml
-    :linenos:
+.. code-block::yaml
 
     Data:
       data_dir: 'data'
@@ -29,7 +28,6 @@ This reads all keys and values from the yaml file and writes a python file with 
 returns:
 
 .. code-block::python
-    :linenos:
 
     class Data:
         data_dir = 'data'
@@ -38,7 +36,7 @@ returns:
 
 so that you can use this as
 
-.. code-block:: python
+.. code-block::python
 
     import myconfig
     myconfig.Data.Files.filename
