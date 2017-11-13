@@ -10,35 +10,33 @@ Python 3.6
 About
 =====
 
-Pronunciation: _[why-con-pie]_ 
+Pronunciation: _[why-con-pie]_
 
-When working with a yaml config file, I was annoyed that I could not use auto completion in my favourite Pyton IDE, so I decided to read the config into a Python file with a class for each set of keys. Since having to add the keys in both the yaml file and in the python file is tiresome and error-prone, I came up with YConPy. 
+When working with a yaml config file, I was annoyed that I could not use auto completion in my favourite Pyton IDE, so I decided to read the config into a Python file with a class for each set of keys. Since having to add the keys in both the yaml file and in the python file is tiresome and error-prone, I came up with YConPy.
 This reads all keys and values from the yaml file and writes a python file with classes that reflect the yaml faithfully.
 
 *Example:*
 
-```
-Data:
-  data_dir: 'data'
-  
-  Files:
-    filename: 'file.csv'
-```
+::
+    Data:
+      data_dir: 'data'
+
+      Files:
+        filename: 'file.csv'
 
 returns:
 
-```python
-class Data:
-    data_dir = 'data'
-    class Files:
-        filename = 'file.csv'
-```
+::
+    class Data:
+        data_dir = 'data'
+        class Files:
+            filename = 'file.csv'
 
 so that you can use this as
 
-```
-Data.Files.filename
-```
+::
+    Data.Files.filename
+
 
 in your code.
 
@@ -50,23 +48,23 @@ Usage
 Download
 --------
 
-```commandline
-git clone https:github.com/Kyushi/yconpy.git
-```
+::
+    git clone https:github.com/Kyushi/yconpy.git
+
 
 Install
 -------
 
-```commandline
-pip install .
-```
+::
+    pip install .
+
 
 Run
 ---
 
-```commandline
-python -m yconpy [yaml] [root]
-```
+::
+    python -m yconpy [yaml] [root]
+
 
 Use the following command line arguments (if applicable):
 
