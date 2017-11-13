@@ -1,10 +1,14 @@
-# YConPy - Yaml config to Python 
+==============================
+YConPy - Yaml config to Python
+==============================
 
-## Requirements
+Requirements
+============
 
 Python 3.6
 
-### About
+About
+=====
 
 Pronunciation: _[why-con-pie]_ 
 
@@ -31,28 +35,34 @@ class Data:
 ```
 
 so that you can use this as
+
 ```
 Data.Files.filename
 ```
+
 in your code.
 
-The script does this by reading the yaml file using the standard yaml module, generating a string from it and writing that to a `.py` file.
+The script does this by reading the yaml file using the standard yaml module, generating a string from it and writing that to a ``.py`` file.
 
-## Usage
+Usage
+=====
 
-### Download
+Download
+--------
 
 ```commandline
 git clone https:github.com/Kyushi/yconpy.git
 ```
 
-### Install
+Install
+-------
 
 ```commandline
 pip install .
 ```
 
-### Run
+Run
+---
 
 ```commandline
 python -m yconpy [yaml] [root]
@@ -60,8 +70,12 @@ python -m yconpy [yaml] [root]
 
 Use the following command line arguments (if applicable):
 
- Arg | Help | Notes
- --- | --- | ---
- yaml | Path to yaml file | Yaml dir and filename will be used as output file name and dir
- root | Path to root directory of your project | (For future use of adding absolute paths)(optional)
- name | Name of Base class | Base class, of which all config elements are a subclass (optional)
++-----+----------------------------------------+-------------------------------------------------------------------+
+| Arg | Help                                   | Notes                                                             |
++=====+========================================+===================================================================+
+|yaml | Path to yaml file                      | Yaml dir and filename will be used as output file name and dir    |
++-----+----------------------------------------+-------------------------------------------------------------------+
+|root | Path to root directory of your project | (For future use of adding absolute paths)(optional)               |
++-----+----------------------------------------+-------------------------------------------------------------------+
+|name | Name of Base class                     | Base class, of which all config elements are a subclass (optional)|
++-----+----------------------------------------+-------------------------------------------------------------------+
