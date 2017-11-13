@@ -62,5 +62,5 @@ Use the following command line arguments (if applicable):
  Arg | Help | Notes
  --- | --- | ---
  yaml | Path to yaml file | Yaml dir and filename will be used as output file name and dir
- root | Path to root directory of your project | (For future use of adding absolute paths)
+ root | Path to root directory of your project | (For future use of adding absolute paths)(optional)
  name | Name of Base class | Base class, of which all config elements are a subclass (optional)
