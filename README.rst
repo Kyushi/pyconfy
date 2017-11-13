@@ -12,6 +12,7 @@ When working with a yaml config file, I was annoyed that I could not use auto co
 This reads all keys and values from the yaml file and writes a python file with classes that reflect the yaml faithfully.
 
 *Example:*
+
 ```
 Data:
   data_dir: 'data'
