@@ -39,11 +39,28 @@ The script does this by reading the yaml file using the standard yaml module, ge
 
 ## Usage
 
-The following command line arguments are required:
+### Download
+
+```commandline
+git clone https:github.com/Kyushi/yconpy.git
+```
+
+### Install
+
+```commandline
+pip install .
+```
+
+### Run
+
+```commandline
+python -m yconpy [yaml] [root]
+```
+
+Use the following command line arguments (if applicable):
 
  Arg | Help | Notes
  --- | --- | ---
- yaml | Path to yaml file | Planned feature: Yaml dir will be used as output file dir
- root | Path to root directory of your project | -
- out_file 
-
+ yaml | Path to yaml file | Yaml dir and filename will be used as output file name and dir
+ root | Path to root directory of your project | (For future use of adding absolute paths)
+ name | Name of Base class | Base class, of which all config elements are a subclass (optional)

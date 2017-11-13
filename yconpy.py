@@ -6,7 +6,7 @@ import yaml
 def add_root(path_from_here):
     wd = os.path.abspath(os.getcwd())
     root = os.path.join(wd, path_from_here)
-    return f'import os\n\nROOT = "{root}"\n\n'
+    return f'ROOT = "{root}"\n\n'
 
 
 def create_class_str(class_name):
@@ -22,7 +22,10 @@ def create_class_var_str(k, v):
 def generate_classes(k, v, is_sub_n):
     out_str = is_sub_n * 4 * ' '
     if isinstance(v, dict):
-        out_str += create_class_str(k)
+        if k:
+            out_str += create_class_str(k)
+        else:
+            is_sub_n -= 1
         for sk, sv in v.items():
             out_str += generate_classes(sk, sv, is_sub_n + 1)
     else:
@@ -52,15 +55,19 @@ if __name__ == '__main__':
         help="Path to your config yaml file"
     )
     parser.add_argument(
-        "root",
+        "--root",
         help="Add path to root dir"
+    )
+    parser.add_argument(
+        "--name",
+        help="Name for base class",
     )
     args = parser.parse_args()
     outfilepath = get_out_file_path(args.yaml)
     class_str = '"""This is a file that was automatically generated using PyConfY"""\n\n'
-    class_str += add_root(args.root)
-    class_str += generate_classes('LolaConfig', load_yaml(args.yaml), 0)
-    class_str += '\n'
+    if args.root:
+        class_str += add_root(args.root)
+    class_str += generate_classes(args.name, load_yaml(args.yaml), 0)
     with open(outfilepath, 'w') as f:
         f.write(class_str)
     print(f"Config file written to {outfilepath}")
