@@ -10,14 +10,16 @@ Python 3.6
 About
 =====
 
-Pronunciation: _[why-con-pie]_
+Pronunciation: *[why-con-pie]*
 
 When working with a yaml config file, I was annoyed that I could not use auto completion in my favourite Pyton IDE, so I decided to read the config into a Python file with a class for each set of keys. Since having to add the keys in both the yaml file and in the python file is tiresome and error-prone, I came up with YConPy.
 This reads all keys and values from the yaml file and writes a python file with classes that reflect the yaml faithfully.
 
 *Example:*
 
-::
+.. code-block:: Yaml
+    :linenos:
+
     Data:
       data_dir: 'data'
 
@@ -26,7 +28,9 @@ This reads all keys and values from the yaml file and writes a python file with 
 
 returns:
 
-::
+.. code-block::
+    :linenos:
+
     class Data:
         data_dir = 'data'
         class Files:
@@ -34,13 +38,15 @@ returns:
 
 so that you can use this as
 
-::
+.. code-block::
+    :linenos:
+
     Data.Files.filename
 
 
 in your code.
 
-The script does this by reading the yaml file using the standard yaml module, generating a string from it and writing that to a ``.py`` file.
+The script does this by reading the yaml file using the standard yaml module, generating a string from it and writing that to a ```.py`` file.
 
 Usage
 =====
@@ -48,21 +54,24 @@ Usage
 Download
 --------
 
-::
+.. code-block::
+
     git clone https:github.com/Kyushi/yconpy.git
 
 
 Install
 -------
 
-::
+.. code-block::
+
     pip install .
 
 
 Run
 ---
 
-::
+.. code-block::
+
     python -m yconpy [yaml] [root]
 
 
